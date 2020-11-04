@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let root = {
+        key: "A1",
+        children: [
+          {
+            key: "B1",
+            children: [
+              { key: "C1", children: [] },
+              { key: "C2", children: [] },
+            ],
+          },
+          {
+              key:'B2',
+              children:[]
+          }
+        ],
+      };
+      function walk(vdom){
+          doWork(vdom)
+          vdom.children.forEach((child)=>{
+              walk(child)
+          })
+      }
+      function doWork(vdom){
+        console.log(vdom.key);
+      }
+      walk(root) //A1 B1 C1 C2 B2
+    </script>
+  </body>
+</html>
