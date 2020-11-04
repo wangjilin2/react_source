@@ -19,6 +19,7 @@ import React from "react";
 import './App.css';
 import useDraggable from './useDraggable';
 
+// mySelf commit
 const list = [
   {
     src: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3942751454,1089199356&fm=26&gp=0.jpg',
